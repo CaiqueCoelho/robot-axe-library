@@ -922,7 +922,7 @@
                     "impact": null,
                     "none": [],
                     "target": [
-                        ".container-xs > div > .mb-32:nth-child(1)"
+                        ".mb-32.m-0:nth-child(1)"
                     ]
                 },
                 {
@@ -948,85 +948,7 @@
                     "impact": null,
                     "none": [],
                     "target": [
-                        ".container-xs > div > .mb-32:nth-child(2)"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [
-                        {
-                            "data": {
-                                "bgColor": "#151719",
-                                "contrastRatio": 7.47,
-                                "expectedContrastRatio": "4.5:1",
-                                "fgColor": "#9ca9b3",
-                                "fontSize": "15.0pt",
-                                "fontWeight": "normal",
-                                "missingData": null
-                            },
-                            "id": "color-contrast",
-                            "impact": "serious",
-                            "message": "Element has sufficient color contrast of 7.47",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "html": "<p class=\"m-0 mb-32 top-padding\">",
-                    "impact": null,
-                    "none": [],
-                    "target": [
-                        ".top-padding.mb-32"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [
-                        {
-                            "data": {
-                                "bgColor": "#151719",
-                                "contrastRatio": 15.32,
-                                "expectedContrastRatio": "4.5:1",
-                                "fgColor": "#eceded",
-                                "fontSize": "15.0pt",
-                                "fontWeight": "normal",
-                                "missingData": null
-                            },
-                            "id": "color-contrast",
-                            "impact": "serious",
-                            "message": "Element has sufficient color contrast of 15.32",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "html": "<a href=\"https://twitter.com/caiqueocoelho?ref_src=twsrc%5Etfw\" class=\"twitter-follow-button\" data-size=\"large\" data-show-screen-name=\"true\" data-show-count=\"false\">Follow @caiqueocoelho</a>",
-                    "impact": null,
-                    "none": [],
-                    "target": [
-                        ".twitter-follow-button[data-size=\"large\"][data-show-screen-name=\"true\"]:nth-child(1)"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [
-                        {
-                            "data": {
-                                "bgColor": "#151719",
-                                "contrastRatio": 15.32,
-                                "expectedContrastRatio": "4.5:1",
-                                "fgColor": "#eceded",
-                                "fontSize": "15.0pt",
-                                "fontWeight": "normal",
-                                "missingData": null
-                            },
-                            "id": "color-contrast",
-                            "impact": "serious",
-                            "message": "Element has sufficient color contrast of 15.32",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "html": "<a href=\"https://twitter.com/ttretro21?ref_src=twsrc%5Etfw\" class=\"twitter-follow-button\" data-size=\"large\" data-show-screen-name=\"true\" data-show-count=\"false\">Follow @ttretro21</a>",
-                    "impact": null,
-                    "none": [],
-                    "target": [
-                        ".twitter-follow-button[data-size=\"large\"][data-show-screen-name=\"true\"]:nth-child(2)"
+                        ".mb-32.m-0:nth-child(2)"
                     ]
                 },
                 {
@@ -1048,11 +970,37 @@
                             "relatedNodes": []
                         }
                     ],
-                    "html": "<p class=\"size-small top-padding bottom-padding\" data-reveal-delay=\"400\">Observa\u00e7\u00f5es: Este site n\u00e3o foi desenvolvido pelo Twitter. Sua conta precisa estar p\u00fablica e caso tenha postado mais do que 3200 tweets, iremos analisar apenas os \u00faltimos 3200, esta \u00e9 uma limita\u00e7\u00e3o imposta pelo Twitter.</p>",
+                    "html": "<p class=\"size-small mt-8\">Caso apare\u00e7a algum erro, verifique se sua conta est\u00e1 aberta(em modo p\u00fablico) e se o seu resultado demorar muito para aparecer nos avise!</p>",
                     "impact": null,
                     "none": [],
                     "target": [
-                        ".size-small"
+                        ".mt-8"
+                    ]
+                },
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": {
+                                "bgColor": "#151719",
+                                "contrastRatio": 7.47,
+                                "expectedContrastRatio": "4.5:1",
+                                "fgColor": "#9ca9b3",
+                                "fontSize": "12.0pt",
+                                "fontWeight": "normal",
+                                "missingData": null
+                            },
+                            "id": "color-contrast",
+                            "impact": "serious",
+                            "message": "Element has sufficient color contrast of 7.47",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "html": "<p class=\"size-small\">Observa\u00e7\u00f5es: Este site n\u00e3o foi desenvolvido pelo Twitter. Sua conta precisa estar p\u00fablica e caso tenha postado mais do que 3200 tweets, iremos analisar apenas os \u00faltimos 3200, esta \u00e9 uma limita\u00e7\u00e3o imposta pelo Twitter.</p>",
+                    "impact": null,
+                    "none": [],
+                    "target": [
+                        ".size-small:nth-child(3)"
                     ]
                 }
             ],
@@ -1135,24 +1083,6 @@
                     "none": [],
                     "target": [
                         "#root"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [
-                        {
-                            "data": "twitter-js",
-                            "id": "duplicate-id",
-                            "impact": "minor",
-                            "message": "Document has no static elements that share the same id attribute",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "html": "<script id=\"twitter-js\" src=\"//platform.twitter.com/widgets.js\"></script>",
-                    "impact": null,
-                    "none": [],
-                    "target": [
-                        "#twitter-js"
                     ]
                 }
             ],
@@ -1542,7 +1472,7 @@
                         }
                     ],
                     "target": [
-                        ".container-xs > div > .mb-32:nth-child(1)"
+                        ".mb-32.m-0:nth-child(1)"
                     ]
                 },
                 {
@@ -1560,13 +1490,13 @@
                         }
                     ],
                     "target": [
-                        ".container-xs > div > .mb-32:nth-child(2)"
+                        ".mb-32.m-0:nth-child(2)"
                     ]
                 },
                 {
                     "all": [],
                     "any": [],
-                    "html": "<p class=\"m-0 mb-32 top-padding\">",
+                    "html": "<p class=\"size-small mt-8\">Caso apare\u00e7a algum erro, verifique se sua conta est\u00e1 aberta(em modo p\u00fablico) e se o seu resultado demorar muito para aparecer nos avise!</p>",
                     "impact": null,
                     "none": [
                         {
@@ -1578,13 +1508,13 @@
                         }
                     ],
                     "target": [
-                        ".top-padding.mb-32"
+                        ".mt-8"
                     ]
                 },
                 {
                     "all": [],
                     "any": [],
-                    "html": "<a href=\"https://twitter.com/caiqueocoelho?ref_src=twsrc%5Etfw\" class=\"twitter-follow-button\" data-size=\"large\" data-show-screen-name=\"true\" data-show-count=\"false\">Follow @caiqueocoelho</a>",
+                    "html": "<p class=\"size-small\">Observa\u00e7\u00f5es: Este site n\u00e3o foi desenvolvido pelo Twitter. Sua conta precisa estar p\u00fablica e caso tenha postado mais do que 3200 tweets, iremos analisar apenas os \u00faltimos 3200, esta \u00e9 uma limita\u00e7\u00e3o imposta pelo Twitter.</p>",
                     "impact": null,
                     "none": [
                         {
@@ -1596,13 +1526,13 @@
                         }
                     ],
                     "target": [
-                        ".twitter-follow-button[data-size=\"large\"][data-show-screen-name=\"true\"]:nth-child(1)"
+                        ".size-small:nth-child(3)"
                     ]
                 },
                 {
                     "all": [],
                     "any": [],
-                    "html": "<a href=\"https://twitter.com/ttretro21?ref_src=twsrc%5Etfw\" class=\"twitter-follow-button\" data-size=\"large\" data-show-screen-name=\"true\" data-show-count=\"false\">Follow @ttretro21</a>",
+                    "html": "<p class=\"m-0 mb-8\"></p>",
                     "impact": null,
                     "none": [
                         {
@@ -1614,43 +1544,7 @@
                         }
                     ],
                     "target": [
-                        ".twitter-follow-button[data-size=\"large\"][data-show-screen-name=\"true\"]:nth-child(2)"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [],
-                    "html": "<p class=\"size-small top-padding bottom-padding\" data-reveal-delay=\"400\">Observa\u00e7\u00f5es: Este site n\u00e3o foi desenvolvido pelo Twitter. Sua conta precisa estar p\u00fablica e caso tenha postado mais do que 3200 tweets, iremos analisar apenas os \u00faltimos 3200, esta \u00e9 uma limita\u00e7\u00e3o imposta pelo Twitter.</p>",
-                    "impact": null,
-                    "none": [
-                        {
-                            "data": null,
-                            "id": "duplicate-img-label",
-                            "impact": "minor",
-                            "message": "Element does not duplicate existing text in <img> alt text",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "target": [
-                        ".size-small"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [],
-                    "html": "<p class=\"m-0 mb-32\"></p>",
-                    "impact": null,
-                    "none": [
-                        {
-                            "data": null,
-                            "id": "duplicate-img-label",
-                            "impact": "minor",
-                            "message": "Element does not duplicate existing text in <img> alt text",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "target": [
-                        ".container-centered > .mb-32"
+                        ".mb-8"
                     ]
                 },
                 {
@@ -2088,58 +1982,6 @@
                             "relatedNodes": []
                         }
                     ],
-                    "html": "<a href=\"https://twitter.com/caiqueocoelho?ref_src=twsrc%5Etfw\" class=\"twitter-follow-button\" data-size=\"large\" data-show-screen-name=\"true\" data-show-count=\"false\">Follow @caiqueocoelho</a>",
-                    "impact": null,
-                    "none": [
-                        {
-                            "data": null,
-                            "id": "focusable-no-name",
-                            "impact": "serious",
-                            "message": "Element is not in tab order or has accessible text",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "target": [
-                        ".twitter-follow-button[data-size=\"large\"][data-show-screen-name=\"true\"]:nth-child(1)"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [
-                        {
-                            "data": null,
-                            "id": "has-visible-text",
-                            "impact": "minor",
-                            "message": "Element has text that is visible to screen readers",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "html": "<a href=\"https://twitter.com/ttretro21?ref_src=twsrc%5Etfw\" class=\"twitter-follow-button\" data-size=\"large\" data-show-screen-name=\"true\" data-show-count=\"false\">Follow @ttretro21</a>",
-                    "impact": null,
-                    "none": [
-                        {
-                            "data": null,
-                            "id": "focusable-no-name",
-                            "impact": "serious",
-                            "message": "Element is not in tab order or has accessible text",
-                            "relatedNodes": []
-                        }
-                    ],
-                    "target": [
-                        ".twitter-follow-button[data-size=\"large\"][data-show-screen-name=\"true\"]:nth-child(2)"
-                    ]
-                },
-                {
-                    "all": [],
-                    "any": [
-                        {
-                            "data": null,
-                            "id": "has-visible-text",
-                            "impact": "minor",
-                            "message": "Element has text that is visible to screen readers",
-                            "relatedNodes": []
-                        }
-                    ],
                     "html": "<a href=\"/doar\" class=\"button button-primary\">DOAR</a>",
                     "impact": null,
                     "none": [
@@ -2538,7 +2380,7 @@
             ]
         }
     ],
-    "timestamp": "2021-12-22T04:03:56.179Z",
+    "timestamp": "2021-12-23T05:20:01.640Z",
     "url": "https://retrospective-twitter.web.app/",
     "violations": [
         {
@@ -2579,7 +2421,7 @@
                     "impact": "serious",
                     "none": [],
                     "target": [
-                        ".mb-32:nth-child(1) > .text-color-primary"
+                        ".mb-32.m-0:nth-child(1) > .text-color-primary"
                     ]
                 },
                 {

@@ -4,15 +4,15 @@ Library  SeleniumLibrary
 Library    AxeLibrary.py
 Variables    VariableFile.py
 
-Suite Teardown     Close All Browsers
-# Test Teardown    Close All Browsers
+# Suite Teardown     Close All Browsers
+Test Teardown    Close All Browsers
 
 *** Variables ***
 @{specific_a11y}    area-alt    color-contrast
 @{specific_one_a11y}    area-alt
 @{specific_tags_a11y}    wcag2a    wcag2aa
 @{specific_one_tag_a11y}    wcag2a
-@{ignore_targets}    .mb-32:nth-child(1) > .text-color-primary      .button-wide-mobile
+@{ignore_targets}    .mb-32.m-0:nth-child(1) > .text-color-primary      .button-wide-mobile     .button.button-primary[href$="doar"]
 @{ignore_htmls}    <a href="/doar" class="button button-primary">DOAR</a>
 
 *** Test Cases ***

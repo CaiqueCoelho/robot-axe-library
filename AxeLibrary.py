@@ -42,9 +42,13 @@ class AxeLibrary:
 
         if ignore_htmls == None:
             ignore_htmls = []
+        else:
+            logger.info('Ignoring elements html: {}'.format(ignore_htmls))
 
         if ignore_targets == None:
             ignore_targets = []
+        else:
+            logger.info('Ignoring elements target: {}'.format(ignore_targets))
 
         self.ignore_htmls = ignore_htmls
         self.ignore_targets = ignore_targets
@@ -71,6 +75,7 @@ class AxeLibrary:
 
         self.axe.write_results(self.result, report_file)
         report = self.axe.report(self.result["violations"])
+
         results = {"violations":self.result["violations"], "count_violations":len(self.result["violations"])}
         self.violations = self.result["violations"]
         self.count_violations = len(self.result["violations"])
@@ -104,7 +109,7 @@ class AxeLibrary:
         """
 
         logger.info('You have {} violations'.format(self.count_violations))
-        self.log_readable_accessibility_result()
+        self.log_accessibility_result()
         if(self.count_violations > int(maxAcceptableViolations)):
             return fail("You have {} violations and you just accept {}".format(self.count_violations, maxAcceptableViolations))
 
@@ -115,7 +120,7 @@ class AxeLibrary:
         """
 
         logger.info('You have {} issues'.format(self.count_issues))
-        self.log_readable_accessibility_result()
+        self.log_accessibility_result()
         if(self.count_issues > int(maxAcceptableIssues)):
             return fail("You have {} issues and you just accept {}".format(self.count_issues, maxAcceptableIssues))
         
@@ -129,11 +134,13 @@ class AxeLibrary:
         type_results = self.axe.report(self.result['violations'])
         results = type_results.split("Rule Violated:")
 
-        for result in results:
-            if "Impact Level" in result:
-                final_result = result.strip()
-                chunks = final_result.split("\n")
+        for violation in self.violations:
+            nodes_violation = 0
+            for node in violation['nodes']:
+                if node['html'] not in self.ignore_htmls and node['target'][0] not in self.ignore_targets:
+                    nodes_violation = True
 
+            if nodes_violation:
                 style = """
                     <style>
                         #demo table, #demo th, #demo td{
@@ -148,26 +155,26 @@ class AxeLibrary:
                 table_issues = """
                  <table id="demo" style="width:100%%">
                     <tr>
+                        <th style="width:10%%">Violation id</th>
                         <th style="width:50%%">Violation</th>
-                        <th style="width:5%%">How Fix</th>
+                        <th style="width:5%%">How to fix</th>
                         <th style="width:7%%">Impact</th>
-                        <th style="width:10%%">Tags</th>
+                        <th>Tags</th>
                     </tr>
                     <tr>
+                        <td style="text-align:center">%s</td>
                         <td>%s</td>
                         <td style="text-align:center"><a href="%s">Link</a></td>
                         <td style="text-align:center">%s</td>
                         <td style="text-align:center">%s</td>
                     </tr>
                 </table>
-                """%(str(chunks[0]), (chunks[1].split("URL: "))[-1], (chunks[2].split("Impact Level: "))[-1],
-                 (chunks[3].split("Tags: "))[-1])
+                """%(str(violation['id']), str(violation['description']), str(violation['helpUrl']), str(violation['impact']), str(violation['tags']))
 
                 html_text = style + table_issues
 
                 logger.info(html_text, html=True)
 
-    
         for violation in self.violations:
             for node in violation['nodes']:
                 if node['html'] not in self.ignore_htmls and node['target'][0] not in self.ignore_targets:
@@ -185,13 +192,13 @@ class AxeLibrary:
                     table_issues = """
                     <table id="demo" style="width:100%%">
                         <tr>
-                            <th>Violation id</th>
+                            <th style="width:10%%">Violation id</th>
                             <th>Issue</th>
-                            <th>html</th>
-                            <th>target</th>
+                            <th style="width:20%%">html</th>
+                            <th style="width:20%%">target</th>
                         </tr>
                         <tr>
-                            <td>%s</td>
+                            <td style="text-align:center">%s</td>
                             <td>%s</td>
                             <td>%s</td>
                             <td>%s</td>
