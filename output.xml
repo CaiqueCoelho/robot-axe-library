@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.9 on darwin)" generated="20211222 01:03:42.940" rpa="false" schemaversion="2">
+<suite id="s1" name="Main" source="/Users/user/Documents/RobotAxeLibrary/main.robot">
+<test id="s1-t1" name="Default Check Pass">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://retrospective-twitter.web.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211222 01:03:43.149" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20211222 01:03:43.149" endtime="20211222 01:03:45.982"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Faça o login com a sua conta do twitter</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211222 01:03:45.982" endtime="20211222 01:03:45.994"/>
+</kw>
+<kw name="Check for accessibility issues" library="AxeLibrary">
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>report_accessibility.json</arg>
+<doc>Executes accessibility tests in current page by injecting axe-core javascript and write self.result into `self.result_file` (json). Return self.result statisitics</doc>
+<status status="PASS" starttime="20211222 01:03:45.994" endtime="20211222 01:03:46.225"/>
+</kw>
+<kw name="Should Not Exceed Maximum Issues" library="AxeLibrary">
+<arg>4</arg>
+<doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
+<msg timestamp="20211222 01:03:46.226" level="INFO">You have 3 issues</msg>
+<msg timestamp="20211222 01:03:46.226" level="INFO" html="true">
+                    &lt;style&gt;
+                        #demo table, #demo th, #demo td{
+                            border: 1px dotted black;
+                            border-collapse: collapse;
+                            table-layout: auto;
+                        }
+                    &lt;/style&gt;
+                
+                 &lt;table id="demo" style="width:100%"&gt;
+                    &lt;tr&gt;
+                        &lt;th style="width:50%"&gt;Violation&lt;/th&gt;
+                        &lt;th style="width:5%"&gt;How Fix&lt;/th&gt;
+                        &lt;th style="width:7%"&gt;Impact&lt;/th&gt;
+                        &lt;th style="width:10%"&gt;Tags&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;color-contrast - Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;&lt;a href="https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI"&gt;Link&lt;/a&gt;&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;serious&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;cat.color wcag2aa wcag143&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+                </msg>
+<msg timestamp="20211222 01:03:46.226" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.28 (foreground color: #5658dd, background color: #151719, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;span class="text-color-primary"&amp;gt; modo público (não pode estar fechado)&amp;lt;/span&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.mb-32:nth-child(1) &gt; .text-color-primary&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<msg timestamp="20211222 01:03:46.226" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.77 (foreground color: #eceded, background color: #6163ff, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;a class="button button-primary button-wide-mobile"&amp;gt;Fazer Login com Twitter&amp;lt;/a&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.button-wide-mobile&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<msg timestamp="20211222 01:03:46.226" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.77 (foreground color: #eceded, background color: #6163ff, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;a href="/doar" class="button button-primary"&amp;gt;DOAR&amp;lt;/a&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.button.button-primary[href$="doar"]&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<status status="PASS" starttime="20211222 01:03:46.225" endtime="20211222 01:03:46.226"/>
+</kw>
+<status status="PASS" starttime="20211222 01:03:43.148" endtime="20211222 01:03:46.226"/>
+</test>
+<test id="s1-t2" name="Default Check Fail">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://retrospective-twitter.web.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211222 01:03:46.228" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20211222 01:03:46.227" endtime="20211222 01:03:49.218"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Faça o login com a sua conta do twitter</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211222 01:03:49.219" endtime="20211222 01:03:49.240"/>
+</kw>
+<kw name="Check for accessibility issues" library="AxeLibrary">
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>report_accessibility.json</arg>
+<doc>Executes accessibility tests in current page by injecting axe-core javascript and write self.result into `self.result_file` (json). Return self.result statisitics</doc>
+<status status="PASS" starttime="20211222 01:03:49.241" endtime="20211222 01:03:49.498"/>
+</kw>
+<kw name="Should Not Exceed Maximum Issues" library="AxeLibrary">
+<arg>1</arg>
+<doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
+<msg timestamp="20211222 01:03:49.498" level="INFO">You have 3 issues</msg>
+<msg timestamp="20211222 01:03:49.498" level="INFO" html="true">
+                    &lt;style&gt;
+                        #demo table, #demo th, #demo td{
+                            border: 1px dotted black;
+                            border-collapse: collapse;
+                            table-layout: auto;
+                        }
+                    &lt;/style&gt;
+                
+                 &lt;table id="demo" style="width:100%"&gt;
+                    &lt;tr&gt;
+                        &lt;th style="width:50%"&gt;Violation&lt;/th&gt;
+                        &lt;th style="width:5%"&gt;How Fix&lt;/th&gt;
+                        &lt;th style="width:7%"&gt;Impact&lt;/th&gt;
+                        &lt;th style="width:10%"&gt;Tags&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;color-contrast - Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;&lt;a href="https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI"&gt;Link&lt;/a&gt;&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;serious&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;cat.color wcag2aa wcag143&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+                </msg>
+<msg timestamp="20211222 01:03:49.498" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.28 (foreground color: #5658dd, background color: #151719, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;span class="text-color-primary"&amp;gt; modo público (não pode estar fechado)&amp;lt;/span&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.mb-32:nth-child(1) &gt; .text-color-primary&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<msg timestamp="20211222 01:03:49.498" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.77 (foreground color: #eceded, background color: #6163ff, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;a class="button button-primary button-wide-mobile"&amp;gt;Fazer Login com Twitter&amp;lt;/a&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.button-wide-mobile&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<msg timestamp="20211222 01:03:49.499" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.77 (foreground color: #eceded, background color: #6163ff, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;a href="/doar" class="button button-primary"&amp;gt;DOAR&amp;lt;/a&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.button.button-primary[href$="doar"]&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<msg timestamp="20211222 01:03:49.517" level="FAIL">You have 3 issues and you just accept 1</msg>
+<status status="FAIL" starttime="20211222 01:03:49.498" endtime="20211222 01:03:49.517"/>
+</kw>
+<status status="FAIL" starttime="20211222 01:03:46.227" endtime="20211222 01:03:49.518">You have 3 issues and you just accept 1</status>
+</test>
+<test id="s1-t3" name="Ignore targets">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://retrospective-twitter.web.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211222 01:03:49.520" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20211222 01:03:49.519" endtime="20211222 01:03:52.504"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Faça o login com a sua conta do twitter</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211222 01:03:52.504" endtime="20211222 01:03:52.517"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ignore_targets}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211222 01:03:52.517" level="INFO">['.mb-32:nth-child(1) &gt; .text-color-primary', '.button-wide-mobile']</msg>
+<status status="PASS" starttime="20211222 01:03:52.517" endtime="20211222 01:03:52.517"/>
+</kw>
+<kw name="Check for accessibility issues" library="AxeLibrary">
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>${ignore_targets}</arg>
+<arg>None</arg>
+<arg>report_accessibility.json</arg>
+<doc>Executes accessibility tests in current page by injecting axe-core javascript and write self.result into `self.result_file` (json). Return self.result statisitics</doc>
+<status status="PASS" starttime="20211222 01:03:52.518" endtime="20211222 01:03:52.833"/>
+</kw>
+<kw name="Should Not Exceed Maximum Issues" library="AxeLibrary">
+<arg>2</arg>
+<doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
+<msg timestamp="20211222 01:03:52.834" level="INFO">You have 1 issues</msg>
+<msg timestamp="20211222 01:03:52.834" level="INFO" html="true">
+                    &lt;style&gt;
+                        #demo table, #demo th, #demo td{
+                            border: 1px dotted black;
+                            border-collapse: collapse;
+                            table-layout: auto;
+                        }
+                    &lt;/style&gt;
+                
+                 &lt;table id="demo" style="width:100%"&gt;
+                    &lt;tr&gt;
+                        &lt;th style="width:50%"&gt;Violation&lt;/th&gt;
+                        &lt;th style="width:5%"&gt;How Fix&lt;/th&gt;
+                        &lt;th style="width:7%"&gt;Impact&lt;/th&gt;
+                        &lt;th style="width:10%"&gt;Tags&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;color-contrast - Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;&lt;a href="https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI"&gt;Link&lt;/a&gt;&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;serious&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;cat.color wcag2aa wcag143&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+                </msg>
+<msg timestamp="20211222 01:03:52.834" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.77 (foreground color: #eceded, background color: #6163ff, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;a href="/doar" class="button button-primary"&amp;gt;DOAR&amp;lt;/a&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.button.button-primary[href$="doar"]&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<status status="PASS" starttime="20211222 01:03:52.834" endtime="20211222 01:03:52.834"/>
+</kw>
+<status status="PASS" starttime="20211222 01:03:49.518" endtime="20211222 01:03:52.834"/>
+</test>
+<test id="s1-t4" name="Ignore htmls">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://retrospective-twitter.web.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211222 01:03:52.836" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20211222 01:03:52.835" endtime="20211222 01:03:56.039"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Faça o login com a sua conta do twitter</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211222 01:03:56.040" endtime="20211222 01:03:56.053"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ignore_htmls}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211222 01:03:56.054" level="INFO">['&lt;a href="/doar" class="button button-primary"&gt;DOAR&lt;/a&gt;']</msg>
+<status status="PASS" starttime="20211222 01:03:56.054" endtime="20211222 01:03:56.054"/>
+</kw>
+<kw name="Check for accessibility issues" library="AxeLibrary">
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>None</arg>
+<arg>${ignore_htmls}</arg>
+<arg>report_accessibility.json</arg>
+<doc>Executes accessibility tests in current page by injecting axe-core javascript and write self.result into `self.result_file` (json). Return self.result statisitics</doc>
+<status status="PASS" starttime="20211222 01:03:56.054" endtime="20211222 01:03:56.294"/>
+</kw>
+<kw name="Should Not Exceed Maximum Issues" library="AxeLibrary">
+<arg>3</arg>
+<doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
+<msg timestamp="20211222 01:03:56.295" level="INFO">You have 2 issues</msg>
+<msg timestamp="20211222 01:03:56.295" level="INFO" html="true">
+                    &lt;style&gt;
+                        #demo table, #demo th, #demo td{
+                            border: 1px dotted black;
+                            border-collapse: collapse;
+                            table-layout: auto;
+                        }
+                    &lt;/style&gt;
+                
+                 &lt;table id="demo" style="width:100%"&gt;
+                    &lt;tr&gt;
+                        &lt;th style="width:50%"&gt;Violation&lt;/th&gt;
+                        &lt;th style="width:5%"&gt;How Fix&lt;/th&gt;
+                        &lt;th style="width:7%"&gt;Impact&lt;/th&gt;
+                        &lt;th style="width:10%"&gt;Tags&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;color-contrast - Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;&lt;a href="https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI"&gt;Link&lt;/a&gt;&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;serious&lt;/td&gt;
+                        &lt;td style="text-align:center"&gt;cat.color wcag2aa wcag143&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+                </msg>
+<msg timestamp="20211222 01:03:56.295" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.28 (foreground color: #5658dd, background color: #151719, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;span class="text-color-primary"&amp;gt; modo público (não pode estar fechado)&amp;lt;/span&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.mb-32:nth-child(1) &gt; .text-color-primary&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<msg timestamp="20211222 01:03:56.295" level="INFO" html="true">
+                        &lt;style&gt;
+                            #demo table, #demo th, #demo td{
+                                border: 1px dotted black;
+                                border-collapse: collapse;
+                                table-layout: auto;
+                            }
+                        &lt;/style&gt;
+                    
+                    &lt;table id="demo" style="width:100%"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Violation id&lt;/th&gt;
+                            &lt;th&gt;Issue&lt;/th&gt;
+                            &lt;th&gt;html&lt;/th&gt;
+                            &lt;th&gt;target&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;color-contrast&lt;/td&gt;
+                            &lt;td&gt;Element has insufficient color contrast of 3.77 (foreground color: #eceded, background color: #6163ff, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1&lt;/td&gt;
+                            &lt;td&gt;&amp;lt;a class="button button-primary button-wide-mobile"&amp;gt;Fazer Login com Twitter&amp;lt;/a&amp;gt;&lt;/td&gt;
+                            &lt;td&gt;.button-wide-mobile&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    </msg>
+<status status="PASS" starttime="20211222 01:03:56.294" endtime="20211222 01:03:56.295"/>
+</kw>
+<status status="PASS" starttime="20211222 01:03:52.835" endtime="20211222 01:03:56.296"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211222 01:03:56.297" endtime="20211222 01:03:56.607"/>
+</kw>
+<status status="FAIL" starttime="20211222 01:03:42.942" endtime="20211222 01:03:56.607"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
