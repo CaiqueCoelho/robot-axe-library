@@ -26,7 +26,8 @@ class AxeLibrary:
     @keyword("Check For Accessibility Issues")
     def Check_for_accessibility_issues(self, type_issues=None, specific_issues=None, rules_config=None, ignore_targets=None, ignore_htmls=None, report_file=None):
         """
-        Executes accessibility tests in current page and write the issues into the file pass in report_file variable. Return report, results, self.result
+        Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
+        With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page
 
         |  = Attribute =  |  = Description =  |
         |  type_issues  |  Pass the type of issues you want check for, for example: tags or rule |
@@ -86,10 +87,6 @@ class AxeLibrary:
                 if node['html'] not in ignore_htmls and node['target'][0] not in ignore_targets:
                     self.count_issues += 1
 
-        #for violation in self.violations:
-        #    self.count_issues += len(violation['nodes'])
-
-
         return report, results, self.result
 
 
@@ -128,11 +125,8 @@ class AxeLibrary:
     @keyword("Log Accessibility Result")
     def log_accessibility_result(self):
         """
-        Inserts accessibility result into `log.html`. Need to be used after `Check for accessibility issues` keyword
+        Inserts accessibility result into the `log.html` file. Need to be used after `Check for accessibility issues` keyword
         """
-
-        type_results = self.axe.report(self.result['violations'])
-        results = type_results.split("Rule Violated:")
 
         for violation in self.violations:
             nodes_violation = 0

@@ -9,7 +9,6 @@ except ImportError:
 
 PY3 = sys.version_info > (3,)
 
-VERSION = None
 version_file = join(dirname(abspath(__file__)), 'src', 'AxeLibrary', 'version.py')
 with open(version_file) as file:
     code = compile(file.read(), version_file, 'exec')
