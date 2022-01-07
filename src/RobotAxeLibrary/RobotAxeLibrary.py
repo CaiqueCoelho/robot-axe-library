@@ -7,7 +7,7 @@ from robot.api import logger
 from robot.utils.asserts import fail
 
 @library
-class AxeLibrary:
+class RobotAxeLibrary:
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 

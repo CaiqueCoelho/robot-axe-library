@@ -1084,6 +1084,24 @@
                     "target": [
                         "#root"
                     ]
+                },
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": "_hjRemoteVarsFrame",
+                            "id": "duplicate-id",
+                            "impact": "minor",
+                            "message": "Document has no static elements that share the same id attribute",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "html": "<iframe name=\"_hjRemoteVarsFrame\" title=\"_hjRemoteVarsFrame\" id=\"_hjRemoteVarsFrame\" src=\"https://vars.hotjar.com/box-a1ae2079824d1c48aa9ce06efb256f18.html\" style=\"display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;\">",
+                    "impact": null,
+                    "none": [],
+                    "target": [
+                        "#_hjRemoteVarsFrame"
+                    ]
                 }
             ],
             "tags": [
@@ -2380,7 +2398,7 @@
             ]
         }
     ],
-    "timestamp": "2021-12-27T02:20:37.563Z",
+    "timestamp": "2022-01-07T19:51:41.062Z",
     "url": "https://retrospective-twitter.web.app/",
     "violations": [
         {

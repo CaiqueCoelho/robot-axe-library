@@ -1,3 +1,4 @@
+import pathlib
 import sys
 from os.path import abspath, dirname, join
 
@@ -9,32 +10,40 @@ except ImportError:
 
 PY3 = sys.version_info > (3,)
 
-version_file = join(dirname(abspath(__file__)), 'src', 'AxeLibrary', 'version.py')
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
+version_file = join(dirname(abspath(__file__)), 'src', 'RobotAxeLibrary', 'version.py')
 with open(version_file) as file:
     code = compile(file.read(), version_file, 'exec')
     exec(code)
 
-CLASSIFIERS = """
-Operating System :: OS Independent
-Programming Language :: Python
-Topic :: Software Development :: Testing
-"""[1:-1]
+CLASSIFIERS = [
+"License :: OSI Approved :: MIT License",
+"Programming Language :: Python",
+"Topic :: Software Development :: Testing",
+]
 
 
 setup(
       name='robot-axelibrary',
       version=VERSION,
       description='Robot Framework Library wrapper axe-selenium-python',
-      long_description='Robot Framework Library wrapper axe-selenium-python',
+      long_description=README,
+      long_description_content_type="text/markdown",
       author='Caíque Coelho',
       author_email='caiquedpfc@gmail.com',
-      url='',
+      url='https://github.com/CaiqueCoelho/robot-axe-library',
       license='MIT',
       keywords='robotframework testing automation axe selenium python',
       platforms='any',
-      classifiers=CLASSIFIERS.splitlines(),
+      classifiers=CLASSIFIERS,
       package_dir={'': 'src'},
-      packages=['AxeLibrary'],
+      packages=['RobotAxeLibrary'],
+      include_package_data=True,
       install_requires=[
           'robotframework',
           'axe-selenium-python'

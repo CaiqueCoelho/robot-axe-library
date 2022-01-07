@@ -1,7 +1,7 @@
 *** Settings ***
 Library  OperatingSystem
 Library  SeleniumLibrary
-Library    AxeLibrary.py
+Library    ../src/RobotAxeLibrary/RobotAxeLibrary.py
 # A python file to store variable informations to be used in the test, like a dictionary with config rules
 Variables    VariableFile.py
 
