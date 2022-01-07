@@ -19,9 +19,9 @@ Library     RobotAxeLibrary
 *** Test Cases ***
 Default Check Pass
 
-    Open Browser  https://retrospective-twitter.web.app/  chrome
-    Wait Until Page Contains   Faça o login com a sua conta do twitter
-    Check for accessibility issues   None    None   None   None     None    report_accessibility.json
+    Open Browser                        https://retrospective-twitter.web.app/  chrome
+    Wait Until Page Contains            Faça o login com a sua conta do twitter
+    Check for accessibility issues      report_file=report_accessibility.json
     Should Not Exceed Maximum Issues    4
  ```
 

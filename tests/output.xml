@@ -1,72 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.9.9 on darwin)" generated="20220107 16:51:07.888" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0 (Python 3.9.9 on darwin)" generated="20220107 17:11:24.131" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="/Users/user/Documents/RobotAxeLibrary/tests/tests.robot">
 <test id="s1-t1" name="Check for specifics tags">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://retrospective-twitter.web.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 16:51:08.086" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
-<status status="PASS" starttime="20220107 16:51:08.085" endtime="20220107 16:51:12.825"/>
+<msg timestamp="20220107 17:11:24.259" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20220107 17:11:24.259" endtime="20220107 17:11:29.616"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Faça o login com a sua conta do twitter</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220107 16:51:12.826" endtime="20220107 16:51:12.839"/>
+<status status="PASS" starttime="20220107 17:11:29.616" endtime="20220107 17:11:29.628"/>
 </kw>
 <kw name="Check For Accessibility Issues" library="RobotAxeLibrary">
-<arg>tags</arg>
-<arg>${specific_one_tag_a11y}</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>report_accessibility.json</arg>
+<arg>type_issues=tags</arg>
+<arg>specific_issues=${specific_one_tag_a11y}</arg>
+<arg>report_file=report_accessibility.json</arg>
 <doc>Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
 With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page</doc>
-<msg timestamp="20220107 16:51:12.895" level="INFO">Searching for accesibility issues with options: ['wcag2a']</msg>
-<status status="PASS" starttime="20220107 16:51:12.839" endtime="20220107 16:51:13.047"/>
+<msg timestamp="20220107 17:11:29.675" level="INFO">Searching for accesibility issues with options: ['wcag2a']</msg>
+<status status="PASS" starttime="20220107 17:11:29.628" endtime="20220107 17:11:29.823"/>
 </kw>
 <kw name="Should Not Exceed Maximum Issues" library="RobotAxeLibrary">
 <arg>1</arg>
 <doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
-<msg timestamp="20220107 16:51:13.047" level="INFO">You have 0 issues</msg>
-<status status="PASS" starttime="20220107 16:51:13.047" endtime="20220107 16:51:13.047"/>
+<msg timestamp="20220107 17:11:29.824" level="INFO">You have 0 issues</msg>
+<status status="PASS" starttime="20220107 17:11:29.824" endtime="20220107 17:11:29.824"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220107 16:51:13.047" endtime="20220107 16:51:13.171"/>
+<status status="PASS" starttime="20220107 17:11:29.824" endtime="20220107 17:11:29.895"/>
 </kw>
-<status status="PASS" starttime="20220107 16:51:08.084" endtime="20220107 16:51:13.171"/>
+<status status="PASS" starttime="20220107 17:11:24.258" endtime="20220107 17:11:29.896"/>
 </test>
 <test id="s1-t2" name="Check for other rules">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://retrospective-twitter.web.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 16:51:13.173" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
-<status status="PASS" starttime="20220107 16:51:13.172" endtime="20220107 16:51:17.962"/>
+<msg timestamp="20220107 17:11:29.897" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20220107 17:11:29.897" endtime="20220107 17:11:35.231"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Faça o login com a sua conta do twitter</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220107 16:51:17.963" endtime="20220107 16:51:17.975"/>
+<status status="PASS" starttime="20220107 17:11:35.232" endtime="20220107 17:11:35.243"/>
 </kw>
 <kw name="Check For Accessibility Issues" library="RobotAxeLibrary">
-<arg>None</arg>
-<arg>None</arg>
-<arg>${DICTIONARY}</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>report_accessibility.json</arg>
+<arg>rules_config=${DICTIONARY}</arg>
+<arg>report_file=report_accessibility.json</arg>
 <doc>Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
 With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page</doc>
-<status status="PASS" starttime="20220107 16:51:17.975" endtime="20220107 16:51:18.210"/>
+<status status="PASS" starttime="20220107 17:11:35.243" endtime="20220107 17:11:35.466"/>
 </kw>
 <kw name="Should Not Exceed Maximum Issues" library="RobotAxeLibrary">
 <arg>1</arg>
 <doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
-<msg timestamp="20220107 16:51:18.211" level="INFO">You have 3 issues</msg>
-<msg timestamp="20220107 16:51:18.211" level="INFO" html="true">
+<msg timestamp="20220107 17:11:35.466" level="INFO">You have 3 issues</msg>
+<msg timestamp="20220107 17:11:35.466" level="INFO" html="true">
                     &lt;style&gt;
                         #demo table, #demo th, #demo td{
                             border: 1px dotted black;
@@ -92,7 +85,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                     &lt;/tr&gt;
                 &lt;/table&gt;
                 </msg>
-<msg timestamp="20220107 16:51:18.211" level="INFO" html="true">
+<msg timestamp="20220107 17:11:35.466" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -116,7 +109,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:18.211" level="INFO" html="true">
+<msg timestamp="20220107 17:11:35.467" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -140,7 +133,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:18.211" level="INFO" html="true">
+<msg timestamp="20220107 17:11:35.467" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -164,44 +157,39 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:18.213" level="FAIL">You have 3 issues and you just accept 1</msg>
-<status status="FAIL" starttime="20220107 16:51:18.211" endtime="20220107 16:51:18.213"/>
+<msg timestamp="20220107 17:11:35.467" level="FAIL">You have 3 issues and you just accept 1</msg>
+<status status="FAIL" starttime="20220107 17:11:35.466" endtime="20220107 17:11:35.467"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220107 16:51:18.214" endtime="20220107 16:51:18.337"/>
+<status status="PASS" starttime="20220107 17:11:35.468" endtime="20220107 17:11:35.541"/>
 </kw>
-<status status="FAIL" starttime="20220107 16:51:13.172" endtime="20220107 16:51:18.337">You have 3 issues and you just accept 1</status>
+<status status="FAIL" starttime="20220107 17:11:29.896" endtime="20220107 17:11:35.541">You have 3 issues and you just accept 1</status>
 </test>
 <test id="s1-t3" name="Default Check Pass">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://retrospective-twitter.web.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 16:51:18.339" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
-<status status="PASS" starttime="20220107 16:51:18.339" endtime="20220107 16:51:23.893"/>
+<msg timestamp="20220107 17:11:35.543" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20220107 17:11:35.542" endtime="20220107 17:11:40.725"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Faça o login com a sua conta do twitter</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220107 16:51:23.893" endtime="20220107 16:51:23.905"/>
+<status status="PASS" starttime="20220107 17:11:40.726" endtime="20220107 17:11:40.735"/>
 </kw>
 <kw name="Check For Accessibility Issues" library="RobotAxeLibrary">
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>report_accessibility.json</arg>
+<arg>report_file=report_accessibility.json</arg>
 <doc>Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
 With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page</doc>
-<status status="PASS" starttime="20220107 16:51:23.906" endtime="20220107 16:51:24.136"/>
+<status status="PASS" starttime="20220107 17:11:40.736" endtime="20220107 17:11:40.954"/>
 </kw>
 <kw name="Should Not Exceed Maximum Issues" library="RobotAxeLibrary">
 <arg>4</arg>
 <doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
-<msg timestamp="20220107 16:51:24.137" level="INFO">You have 3 issues</msg>
-<msg timestamp="20220107 16:51:24.137" level="INFO" html="true">
+<msg timestamp="20220107 17:11:40.954" level="INFO">You have 3 issues</msg>
+<msg timestamp="20220107 17:11:40.954" level="INFO" html="true">
                     &lt;style&gt;
                         #demo table, #demo th, #demo td{
                             border: 1px dotted black;
@@ -227,7 +215,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                     &lt;/tr&gt;
                 &lt;/table&gt;
                 </msg>
-<msg timestamp="20220107 16:51:24.137" level="INFO" html="true">
+<msg timestamp="20220107 17:11:40.954" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -251,7 +239,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:24.137" level="INFO" html="true">
+<msg timestamp="20220107 17:11:40.954" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -275,7 +263,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:24.137" level="INFO" html="true">
+<msg timestamp="20220107 17:11:40.954" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -299,43 +287,38 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<status status="PASS" starttime="20220107 16:51:24.137" endtime="20220107 16:51:24.137"/>
+<status status="PASS" starttime="20220107 17:11:40.954" endtime="20220107 17:11:40.955"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220107 16:51:24.138" endtime="20220107 16:51:24.260"/>
+<status status="PASS" starttime="20220107 17:11:40.955" endtime="20220107 17:11:41.027"/>
 </kw>
-<status status="PASS" starttime="20220107 16:51:18.338" endtime="20220107 16:51:24.260"/>
+<status status="PASS" starttime="20220107 17:11:35.542" endtime="20220107 17:11:41.027"/>
 </test>
 <test id="s1-t4" name="Default Check Fail">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://retrospective-twitter.web.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 16:51:24.262" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
-<status status="PASS" starttime="20220107 16:51:24.261" endtime="20220107 16:51:29.630"/>
+<msg timestamp="20220107 17:11:41.029" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20220107 17:11:41.028" endtime="20220107 17:11:46.506"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Faça o login com a sua conta do twitter</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220107 16:51:29.631" endtime="20220107 16:51:29.642"/>
+<status status="PASS" starttime="20220107 17:11:46.506" endtime="20220107 17:11:46.518"/>
 </kw>
 <kw name="Check For Accessibility Issues" library="RobotAxeLibrary">
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>report_accessibility.json</arg>
+<arg>report_file=report_accessibility.json</arg>
 <doc>Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
 With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page</doc>
-<status status="PASS" starttime="20220107 16:51:29.643" endtime="20220107 16:51:29.875"/>
+<status status="PASS" starttime="20220107 17:11:46.518" endtime="20220107 17:11:46.741"/>
 </kw>
 <kw name="Should Not Exceed Maximum Issues" library="RobotAxeLibrary">
 <arg>1</arg>
 <doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
-<msg timestamp="20220107 16:51:29.876" level="INFO">You have 3 issues</msg>
-<msg timestamp="20220107 16:51:29.876" level="INFO" html="true">
+<msg timestamp="20220107 17:11:46.741" level="INFO">You have 3 issues</msg>
+<msg timestamp="20220107 17:11:46.741" level="INFO" html="true">
                     &lt;style&gt;
                         #demo table, #demo th, #demo td{
                             border: 1px dotted black;
@@ -361,7 +344,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                     &lt;/tr&gt;
                 &lt;/table&gt;
                 </msg>
-<msg timestamp="20220107 16:51:29.876" level="INFO" html="true">
+<msg timestamp="20220107 17:11:46.742" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -385,7 +368,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:29.876" level="INFO" html="true">
+<msg timestamp="20220107 17:11:46.742" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -409,7 +392,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:29.876" level="INFO" html="true">
+<msg timestamp="20220107 17:11:46.742" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -433,94 +416,86 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:29.877" level="FAIL">You have 3 issues and you just accept 1</msg>
-<status status="FAIL" starttime="20220107 16:51:29.875" endtime="20220107 16:51:29.877"/>
+<msg timestamp="20220107 17:11:46.742" level="FAIL">You have 3 issues and you just accept 1</msg>
+<status status="FAIL" starttime="20220107 17:11:46.741" endtime="20220107 17:11:46.742"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220107 16:51:29.877" endtime="20220107 16:51:29.999"/>
+<status status="PASS" starttime="20220107 17:11:46.743" endtime="20220107 17:11:46.815"/>
 </kw>
-<status status="FAIL" starttime="20220107 16:51:24.261" endtime="20220107 16:51:29.999">You have 3 issues and you just accept 1</status>
+<status status="FAIL" starttime="20220107 17:11:41.028" endtime="20220107 17:11:46.815">You have 3 issues and you just accept 1</status>
 </test>
 <test id="s1-t5" name="Ignore targets">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://retrospective-twitter.web.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 16:51:30.000" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
-<status status="PASS" starttime="20220107 16:51:30.000" endtime="20220107 16:51:35.323"/>
+<msg timestamp="20220107 17:11:46.817" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20220107 17:11:46.817" endtime="20220107 17:11:51.968"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Faça o login com a sua conta do twitter</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220107 16:51:35.323" endtime="20220107 16:51:35.336"/>
+<status status="PASS" starttime="20220107 17:11:51.969" endtime="20220107 17:11:51.980"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${ignore_targets}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220107 16:51:35.337" level="INFO">['.mb-32.m-0:nth-child(1) &gt; .text-color-primary', '.button-wide-mobile', '.button.button-primary[href$="doar"]']</msg>
-<status status="PASS" starttime="20220107 16:51:35.337" endtime="20220107 16:51:35.337"/>
+<msg timestamp="20220107 17:11:51.980" level="INFO">['.mb-32.m-0:nth-child(1) &gt; .text-color-primary', '.button-wide-mobile', '.button.button-primary[href$="doar"]']</msg>
+<status status="PASS" starttime="20220107 17:11:51.980" endtime="20220107 17:11:51.980"/>
 </kw>
 <kw name="Check For Accessibility Issues" library="RobotAxeLibrary">
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>${ignore_targets}</arg>
-<arg>None</arg>
-<arg>report_accessibility.json</arg>
+<arg>ignore_targets=${ignore_targets}</arg>
+<arg>report_file=report_accessibility.json</arg>
 <doc>Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
 With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page</doc>
-<msg timestamp="20220107 16:51:35.338" level="INFO">Ignoring elements target: ['.mb-32.m-0:nth-child(1) &gt; .text-color-primary', '.button-wide-mobile', '.button.button-primary[href$="doar"]']</msg>
-<status status="PASS" starttime="20220107 16:51:35.337" endtime="20220107 16:51:35.568"/>
+<msg timestamp="20220107 17:11:51.981" level="INFO">Ignoring elements target: ['.mb-32.m-0:nth-child(1) &gt; .text-color-primary', '.button-wide-mobile', '.button.button-primary[href$="doar"]']</msg>
+<status status="PASS" starttime="20220107 17:11:51.980" endtime="20220107 17:11:52.198"/>
 </kw>
 <kw name="Should Not Exceed Maximum Issues" library="RobotAxeLibrary">
 <arg>2</arg>
 <doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
-<msg timestamp="20220107 16:51:35.568" level="INFO">You have 0 issues</msg>
-<status status="PASS" starttime="20220107 16:51:35.568" endtime="20220107 16:51:35.568"/>
+<msg timestamp="20220107 17:11:52.198" level="INFO">You have 0 issues</msg>
+<status status="PASS" starttime="20220107 17:11:52.198" endtime="20220107 17:11:52.199"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220107 16:51:35.569" endtime="20220107 16:51:35.641"/>
+<status status="PASS" starttime="20220107 17:11:52.199" endtime="20220107 17:11:52.321"/>
 </kw>
-<status status="PASS" starttime="20220107 16:51:29.999" endtime="20220107 16:51:35.641"/>
+<status status="PASS" starttime="20220107 17:11:46.816" endtime="20220107 17:11:52.321"/>
 </test>
 <test id="s1-t6" name="Ignore htmls">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://retrospective-twitter.web.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 16:51:35.642" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
-<status status="PASS" starttime="20220107 16:51:35.642" endtime="20220107 16:51:40.931"/>
+<msg timestamp="20220107 17:11:52.322" level="INFO">Opening browser 'chrome' to base url 'https://retrospective-twitter.web.app/'.</msg>
+<status status="PASS" starttime="20220107 17:11:52.322" endtime="20220107 17:11:57.648"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Faça o login com a sua conta do twitter</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220107 16:51:40.931" endtime="20220107 16:51:40.944"/>
+<status status="PASS" starttime="20220107 17:11:57.649" endtime="20220107 17:11:57.661"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${ignore_htmls}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220107 16:51:40.944" level="INFO">['&lt;a href="/doar" class="button button-primary"&gt;DOAR&lt;/a&gt;']</msg>
-<status status="PASS" starttime="20220107 16:51:40.944" endtime="20220107 16:51:40.944"/>
+<msg timestamp="20220107 17:11:57.661" level="INFO">['&lt;a href="/doar" class="button button-primary"&gt;DOAR&lt;/a&gt;']</msg>
+<status status="PASS" starttime="20220107 17:11:57.661" endtime="20220107 17:11:57.662"/>
 </kw>
 <kw name="Check For Accessibility Issues" library="RobotAxeLibrary">
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>None</arg>
-<arg>${ignore_htmls}</arg>
-<arg>report_accessibility.json</arg>
+<arg>ignore_htmls=${ignore_htmls}</arg>
+<arg>report_file=report_accessibility.json</arg>
 <doc>Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
 With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page</doc>
-<msg timestamp="20220107 16:51:40.945" level="INFO">Ignoring elements html: ['&lt;a href="/doar" class="button button-primary"&gt;DOAR&lt;/a&gt;']</msg>
-<status status="PASS" starttime="20220107 16:51:40.945" endtime="20220107 16:51:41.177"/>
+<msg timestamp="20220107 17:11:57.662" level="INFO">Ignoring elements html: ['&lt;a href="/doar" class="button button-primary"&gt;DOAR&lt;/a&gt;']</msg>
+<status status="PASS" starttime="20220107 17:11:57.662" endtime="20220107 17:11:57.887"/>
 </kw>
 <kw name="Should Not Exceed Maximum Issues" library="RobotAxeLibrary">
 <arg>3</arg>
 <doc>Return an error if count_issues &gt; maxAcceptableIssues</doc>
-<msg timestamp="20220107 16:51:41.177" level="INFO">You have 2 issues</msg>
-<msg timestamp="20220107 16:51:41.177" level="INFO" html="true">
+<msg timestamp="20220107 17:11:57.887" level="INFO">You have 2 issues</msg>
+<msg timestamp="20220107 17:11:57.887" level="INFO" html="true">
                     &lt;style&gt;
                         #demo table, #demo th, #demo td{
                             border: 1px dotted black;
@@ -546,7 +521,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                     &lt;/tr&gt;
                 &lt;/table&gt;
                 </msg>
-<msg timestamp="20220107 16:51:41.178" level="INFO" html="true">
+<msg timestamp="20220107 17:11:57.887" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -570,7 +545,7 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<msg timestamp="20220107 16:51:41.178" level="INFO" html="true">
+<msg timestamp="20220107 17:11:57.888" level="INFO" html="true">
                         &lt;style&gt;
                             #demo table, #demo th, #demo td{
                                 border: 1px dotted black;
@@ -594,15 +569,15 @@ With this keyword you can pass the type of issues, rules and wcag levels you wan
                         &lt;/tr&gt;
                     &lt;/table&gt;
                     </msg>
-<status status="PASS" starttime="20220107 16:51:41.177" endtime="20220107 16:51:41.178"/>
+<status status="PASS" starttime="20220107 17:11:57.887" endtime="20220107 17:11:57.888"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220107 16:51:41.178" endtime="20220107 16:51:41.301"/>
+<status status="PASS" starttime="20220107 17:11:57.888" endtime="20220107 17:11:57.961"/>
 </kw>
-<status status="PASS" starttime="20220107 16:51:35.641" endtime="20220107 16:51:41.301"/>
+<status status="PASS" starttime="20220107 17:11:52.321" endtime="20220107 17:11:57.961"/>
 </test>
-<status status="FAIL" starttime="20220107 16:51:07.889" endtime="20220107 16:51:41.302"/>
+<status status="FAIL" starttime="20220107 17:11:24.132" endtime="20220107 17:11:57.962"/>
 </suite>
 <statistics>
 <total>
