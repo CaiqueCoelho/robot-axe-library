@@ -29,13 +29,13 @@ class AxeLibrary:
         Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
         With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page
 
-        |  = Attribute =  |  = Description =  |
-        |  type_issues  |  Pass the type of issues you want check for, for example: tags or rule |
+        |  = Attribute =    |  = Description =  |
+        |  type_issues      |  Pass the type of issues you want to check for, for example: tags or rule |
         |  specific_issues  |  Pass the specific issues you want to check, for example: for tags use wcag2a, wcag2aa, for rules use area-alt, color-contrast |
-        |  rules_config  |  Pass rules to check or to not check, using a dict with the rules follow by the key enabled, for example like: {"rules": {"color-contrast": { "enabled": 0 }, "heading-order": { "enabled": 1 }}} |
-        |  ignore_targets  |  Pass the elements you dont want to check, using the target information |
-        |  ignore_htmls  |  Pass the elements you dont want to check, using the html information |
-        |   eport_file     |  File to store accessibility issues result for example: report_accessibility.json  |
+        |  rules_config     |  Pass the rules to check or to not check, using a dict with the rules follow by the key enabled, for example like: {"rules": {"color-contrast": { "enabled": 0 }, "heading-order": { "enabled": 1 }}} |
+        |  ignore_targets   |  Pass the elements you dont want to check, using the target information |
+        |  ignore_htmls     |  Pass the elements you dont want to check, using the html information |
+        |  report_file      |  File to store accessibility issues result for example: report_accessibility.json  |
         """
         
         seleniumlib = BuiltIn().get_library_instance('SeleniumLibrary')
