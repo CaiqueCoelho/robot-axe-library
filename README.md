@@ -25,6 +25,9 @@ Default Check Pass
     Should Not Exceed Maximum Issues    4
  ```
 
+ ## Keywords Documentation
+ [Click Here](https://caiquecoelho.github.io/robot-axe-library/documentation/AxeLibrary.html)
+
  ## Glossary
 - Violation: A violation is a type of accessibility problem, for example a color-contrast problem or a missing aria-label
 - Issue: An issue is the occurrence of a violation in one element or more, for example we can get 2 issues from the type color-contrast and 1 from aria-label
