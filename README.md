@@ -1,7 +1,7 @@
 # Robot Axe Library
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CaiqueCoelho/robot-axe-library/blob/master/LICENSE)
 
-This project is a RobotFramework Library wrapper for axe-selenium-python pakage. In this project we abstracted the entire library setup for use in robotframework and also implemented the entire interface for communicating with the AXE library allowing to define specific filters to look for accessibility issues in addition to allowing the necessary assertions on the test side, for your your test passes or fails depending on the configuration you want, allowing a maximum number of issues, excluding elements you don't want to analyze, and allowing you to define specific accessibility rules, levels, tags and impact.
+This project is a RobotFramework Library wrapper for axe-selenium-python package. In this project we abstracted the entire library setup for use in robotframework and also implemented the entire interface for communicating with the AXE library allowing to define specific filters to look for accessibility issues in addition to allowing the necessary assertions on the test side, for your your test passes or fails depending on the configuration you want, allowing a maximum number of issues, excluding elements you don't want to analyze, and allowing you to define specific accessibility rules, levels, tags and impact.
 
 ## How to install
 
@@ -25,6 +25,9 @@ Default Check Pass
     Should Not Exceed Maximum Issues    4
  ```
 
+ ## Glossary
+- Violation: A violation is a type of accessibility problem, for example a color-contrast problem or a missing aria-label
+- Issue: An issue is the occurrence of a violation in one element or more, for example we can get 2 issues from the type color-contrast and 1 from aria-label
  ## Feature Request
 
 If you have any feature request just open an issue describing your request or feel free with your feature! Any pull pull request are welcome!
