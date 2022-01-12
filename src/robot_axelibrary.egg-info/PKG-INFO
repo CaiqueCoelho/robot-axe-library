@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: robot-axelibrary
-Version: 0.1.0
+Version: 0.1.2
 Summary: Robot Framework Library wrapper axe-selenium-python
 Home-page: https://github.com/CaiqueCoelho/robot-axe-library
 Author: Caíque Coelho
@@ -12,35 +12,41 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
 Classifier: Topic :: Software Development :: Testing
 Description-Content-Type: text/markdown
-License-File: LICENSE.md
+License-File: LICENSE
 
 # Robot Axe Library
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CaiqueCoelho/robot-axe-library/blob/master/LICENSE)
 
-This projext is a RobotFramework Library wrapper for axe-selenium-python pakage. In this project we abstracted the entire library setup for use in robotframework and also implemented the entire interface for communicating with the AXE library allowing to define specific filters to look for accessibility issues in addition to allowing the necessary assertions on the test side, for your your test passes or fails depending on the configuration you want, allowing a maximum number of issues, excluding elements you don't want to analyze, and allowing you to define specific accessibility rules, levels, tags and impact.
+This project is a RobotFramework Library wrapper for axe-selenium-python package. In this project we abstracted the entire library setup for use in robotframework and also implemented the entire interface for communicating with the AXE library allowing to define specific filters to look for accessibility issues in addition to allowing the necessary assertions on the test side, for your your test passes or fails depending on the configuration you want, allowing a maximum number of issues, excluding elements you don't want to analyze, and allowing you to define specific accessibility rules, levels, tags and impact.
 
 ## How to install
 
 ```bash
-pip3 install robot-axelibrary
+pip install robot-axelibrary==0.1.2
 ```
 
 ## How to use
  ```
 *** Settings ***
-Library  OperatingSystem
-Library  SeleniumLibrary
-Library    RobotAxeLibrary
+Library     OperatingSystem
+Library     SeleniumLibrary
+Library     RobotAxeLibrary
 
 *** Test Cases ***
 Default Check Pass
 
-    Open Browser  https://retrospective-twitter.web.app/  chrome
-    Wait Until Page Contains   Faça o login com a sua conta do twitter
-    Check for accessibility issues   None    None   None   None     None    report_accessibility.json
+    Open Browser                        https://retrospective-twitter.web.app/  chrome
+    Wait Until Page Contains            Faça o login com a sua conta do twitter
+    Check for accessibility issues      report_file=report_accessibility.json
     Should Not Exceed Maximum Issues    4
  ```
 
+ ## Keywords Documentation
+ [Click Here](https://caiquecoelho.github.io/robot-axe-library/documentation/AxeLibrary.html)
+
+ ## Glossary
+- Violation: A violation is a type of accessibility problem, for example a color-contrast problem or a missing aria-label
+- Issue: An issue is the occurrence of a violation in one element or more, for example we can get 2 issues from the type color-contrast and 1 from aria-label
  ## Feature Request
 
 If you have any feature request just open an issue describing your request or feel free with your feature! Any pull pull request are welcome!

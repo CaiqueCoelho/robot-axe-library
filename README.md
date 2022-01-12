@@ -6,7 +6,7 @@ This project is a RobotFramework Library wrapper for axe-selenium-python package
 ## How to install
 
 ```bash
-pip install robot-axelibrary==0.1.0
+pip install robot-axelibrary==0.1.2
 ```
 
 ## How to use

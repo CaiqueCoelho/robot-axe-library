@@ -1,0 +1,5 @@
+1. To generate pip package:
+python setup.py sdist bdist_wheel
+
+2. To publish pip package in pypi
+twine upload dist/*
