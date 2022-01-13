@@ -24,6 +24,12 @@ with open(version_file) as file:
 CLASSIFIERS = [
 "License :: OSI Approved :: MIT License",
 "Programming Language :: Python",
+"Programming Language :: Python :: 2",
+"Programming Language :: Python :: 2.7",
+"Programming Language :: Python :: 3",
+"Programming Language :: Python :: 3.6",
+"Programming Language :: Python :: 3.7",
+"Programming Language :: Python :: 3.8",
 "Topic :: Software Development :: Testing",
 ]
 
@@ -34,7 +40,7 @@ setup(
       description='Robot Framework Library wrapper axe-selenium-python',
       long_description=README,
       long_description_content_type="text/markdown",
-      author='Caíque Coelho',
+      author='Caique Coelho',
       author_email='caiquedpfc@gmail.com',
       url='https://github.com/CaiqueCoelho/robot-axe-library',
       license='MIT',

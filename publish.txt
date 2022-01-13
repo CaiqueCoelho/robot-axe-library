@@ -3,3 +3,6 @@ python setup.py sdist bdist_wheel
 
 2. To publish pip package in pypi
 twine upload dist/*
+
+or
+twine upload --skip-existing dist/*

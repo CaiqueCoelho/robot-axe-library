@@ -5,11 +5,13 @@ from axe_selenium_python import Axe
 from selenium import webdriver
 from robot.api import logger
 from robot.utils.asserts import fail
+from .version import VERSION
 
 @library
 class RobotAxeLibrary:
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
+    ROBOT_LIBRARY_VERSION = VERSION
 
     def __init__(self):
         self.axe = None
@@ -23,8 +25,8 @@ class RobotAxeLibrary:
     def helloA11y(self):
         print("Hello from A11y")
 
-    @keyword("Check For Accessibility Issues")
-    def Check_for_accessibility_issues(self, type_issues=None, specific_issues=None, rules_config=None, ignore_targets=None, ignore_htmls=None, report_file=None):
+    @keyword
+    def check_for_accessibility_issues(self, type_issues=None, specific_issues=None, rules_config=None, ignore_targets=None, ignore_htmls=None, report_file='report_accessibility.json'):
         """
         Executes accessibility tests in the current page and write the issues into the file pass in report_file variable. Return report, results and self.result
         With this keyword you can pass the type of issues, rules and wcag levels you want to search, also you can filter out specific elements from the page
@@ -90,7 +92,7 @@ class RobotAxeLibrary:
         return report, results, self.result
 
 
-    @keyword("Get Json Accessibility Result")
+    @keyword
     def get_json_accessibility_result(self):
         """
         Return accessibility test self.result in Json format. Need to be used after `Check for accessibility issues` keyword    
@@ -99,7 +101,7 @@ class RobotAxeLibrary:
         logger.info(result)
         return result
 
-    @keyword("Should Not Exceed Maximum Violations")
+    @keyword
     def should_not_exceed_maximum_violations(self, maxAcceptableViolations):
         """
         Return an error if count_violations > maxAcceptableViolations
@@ -110,7 +112,7 @@ class RobotAxeLibrary:
         if(self.count_violations > int(maxAcceptableViolations)):
             return fail("You have {} violations and you just accept {}".format(self.count_violations, maxAcceptableViolations))
 
-    @keyword("Should Not Exceed Maximum Issues")
+    @keyword
     def should_not_exceed_maximum_issues(self, maxAcceptableIssues):
         """
         Return an error if count_issues > maxAcceptableIssues
@@ -122,7 +124,7 @@ class RobotAxeLibrary:
             return fail("You have {} issues and you just accept {}".format(self.count_issues, maxAcceptableIssues))
         
     
-    @keyword("Log Accessibility Result")
+    @keyword
     def log_accessibility_result(self):
         """
         Inserts accessibility result into the `log.html` file. Need to be used after `Check for accessibility issues` keyword

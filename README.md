@@ -6,7 +6,7 @@ This project is a RobotFramework Library wrapper for axe-selenium-python package
 ## How to install
 
 ```bash
-pip install robot-axelibrary==0.1.2
+pip install robot-axelibrary==0.1.8
 ```
 
 ## How to use
@@ -21,8 +21,8 @@ Default Check Pass
 
     Open Browser                        https://retrospective-twitter.web.app/  chrome
     Wait Until Page Contains            Faça o login com a sua conta do twitter
-    Check for accessibility issues      report_file=report_accessibility.json
-    Should Not Exceed Maximum Issues    4
+    Check for accessibility issues
+    Should Not Exceed Maximum Issues    2
  ```
 
  ## Keywords Documentation

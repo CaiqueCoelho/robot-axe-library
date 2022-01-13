@@ -28,7 +28,7 @@ Check for specifics tags
     Open Browser                https://retrospective-twitter.web.app/     chrome
     Wait Until Page Contains    Faça o login com a sua conta do twitter
 
-    Check for accessibility issues    type_issues=tags    specific_issues=${specific_one_tag_a11y}    report_file=report_accessibility.json
+    Check for accessibility issues    type_issues=tags    specific_issues=${specific_one_tag_a11y}
 
     Should Not Exceed Maximum Issues    1
 
@@ -37,7 +37,7 @@ Check for other rules
     Open Browser                https://retrospective-twitter.web.app/     chrome
     Wait Until Page Contains    Faça o login com a sua conta do twitter
 
-    Check for accessibility issues    rules_config=${DICTIONARY}    report_file=report_accessibility.json
+    Check for accessibility issues    rules_config=${DICTIONARY}
 
     Should Not Exceed Maximum Issues    1
 
@@ -46,7 +46,7 @@ Default Check Pass
     Open Browser                https://retrospective-twitter.web.app/     chrome
     Wait Until Page Contains    Faça o login com a sua conta do twitter
 
-    Check for accessibility issues    report_file=report_accessibility.json
+    Check for accessibility issues
 
     Should Not Exceed Maximum Issues    4
 
@@ -55,7 +55,7 @@ Default Check Fail
     Open Browser                https://retrospective-twitter.web.app/     chrome
     Wait Until Page Contains    Faça o login com a sua conta do twitter
 
-    Check for accessibility issues    report_file=report_accessibility.json
+    Check for accessibility issues
 
     Should Not Exceed Maximum Issues    1
 
@@ -65,7 +65,7 @@ Ignore targets
     Wait Until Page Contains    Faça o login com a sua conta do twitter
 
     Log                               ${ignore_targets}
-    Check for accessibility issues    ignore_targets=${ignore_targets}    report_file=report_accessibility.json
+    Check for accessibility issues    ignore_targets=${ignore_targets}
 
     Should Not Exceed Maximum Issues    2
 
@@ -75,7 +75,7 @@ Ignore htmls
     Wait Until Page Contains    Faça o login com a sua conta do twitter
 
     Log                               ${ignore_htmls}
-    Check for accessibility issues    ignore_htmls=${ignore_htmls}    report_file=report_accessibility.json
+    Check for accessibility issues    ignore_htmls=${ignore_htmls}
 
     Should Not Exceed Maximum Issues    3
 
@@ -85,6 +85,6 @@ Ignore htmls
 #    Open Browser                https://retrospective-twitter.web.app/     chrome
 #    Wait Until Page Contains    Faça o login com a sua conta do twitter
 #
-#    Check for accessibility issues    impact    serious    report_file=rreport_accessibility.json
+#    Check for accessibility issues    impact    serious
 #
 #    Should Not Exceed Maximum Issues    1

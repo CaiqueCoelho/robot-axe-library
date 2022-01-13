@@ -1,15 +1,21 @@
 Metadata-Version: 2.1
 Name: robot-axelibrary
-Version: 0.1.2
+Version: 0.1.8
 Summary: Robot Framework Library wrapper axe-selenium-python
 Home-page: https://github.com/CaiqueCoelho/robot-axe-library
-Author: Caíque Coelho
+Author: Caique Coelho
 Author-email: caiquedpfc@gmail.com
 License: MIT
 Keywords: robotframework testing automation axe selenium python
 Platform: any
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
 Classifier: Topic :: Software Development :: Testing
 Description-Content-Type: text/markdown
 License-File: LICENSE
@@ -22,7 +28,7 @@ This project is a RobotFramework Library wrapper for axe-selenium-python package
 ## How to install
 
 ```bash
-pip install robot-axelibrary==0.1.2
+pip install robot-axelibrary==0.1.8
 ```
 
 ## How to use
