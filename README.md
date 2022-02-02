@@ -12,7 +12,6 @@ pip install robot-axelibrary==0.1.8
 ## How to use
  ```
 *** Settings ***
-Library     OperatingSystem
 Library     SeleniumLibrary
 Library     RobotAxeLibrary
 
